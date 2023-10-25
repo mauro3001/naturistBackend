@@ -1,8 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const { getMedicines } = require('./notion')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 
 app.get('/naturist', async (req, res) => {
     try {
